@@ -32,8 +32,8 @@ sudoku(Rows):-
     squares(R7,R8,R9).
 
 squares([],[],[]).
-squares([N1,N2,N3|Ns1],
-        [N4,N5,N6|Ns2],
-        [N7,N8,N9|Ns3]):-
-    all_distinct([N1,N2,N3,N4,N5,N6,N7,N8,N9]),
-    squares(Ns1,Ns2,Ns3).
+squares([X1,X2,X3|S1],
+        [X4,X5,X6|S2],
+        [X7,X8,X9|S3]):-
+    all_distinct([X1,X2,X3,X4,X5,X6,X7,X8,X9]),
+    squares(S1,S2,S3).
